@@ -1,0 +1,15 @@
+body{
+		font-family: 'Noto Serif SC', serif;
+}
+
+p.normal {
+  font-style: normal;
+}
+
+p.italic {
+  font-style: italic;
+}
+
+p.oblique {
+  font-style: oblique;
+}

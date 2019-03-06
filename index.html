@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Balché Nikté. Cosméticos de origen natural con altos estándares de calidad">
 		<title>Balché Nikté</title>
-		<link rel='shorcut icon' href='bn.png' type='image/png'>
+		<link rel='shorcut icon' href='images/bn.png' type='image/png'>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 		<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:200,300,400,500,600,700,900" rel="stylesheet">
-		<link rel="stylesheet" href="fonts.css">
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href=" css/fonts.css">
+		<link rel="stylesheet" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script>
 			$(document).ready(function(){
@@ -23,41 +23,64 @@
 		</script>
 	</head>
 	<body>
-		<header>
+		<header id="inicio">
 			  <nav>
 			    <div class="nav-wrapper">
-			    	<a href="#" class="brand-logo brand-nik"><img src="logobalche.png" alt="logobalche" height="125px"></a>
+			    	<a href="#" class="brand-logo brand-nik"><img src="images/logobalche.png" alt="logobalche" height="125px"></a>
       				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons nav-icon-burger">menu</i></a>
 			      <ul id="nav-mobile" class="right hide-on-med-and-down">
-			        <li class="navnik-item"><a href="#" class="font-navitem">INICIO</a></li>
-			        <li class="navnik-item"><a href="#" class="font-navitem">BENEFICIOS</a></li>
-			        <li class="navnik-item"><a href="#" class="font-navitem">COMPONENTES</a></li>
-			        <li class="navnik-item"><a href="#" class="font-navitem">NOSOTROS</a></li>
-			        <li class="navnik-item"><a href="#" class="font-navitem">CONTACTO</a></li>
+			        <li class="navnik-item"><a href="#inicio" class="font-navitem">INICIO</a></li>
+			        <li class="navnik-item"><a href="#beneficios" class="font-navitem">BENEFICIOS</a></li>
+			        <li class="navnik-item"><a href="#componentes" class="font-navitem">COMPONENTES</a></li>
+			        <li class="navnik-item"><a href="#nosotros" class="font-navitem">NOSOTROS</a></li>
+			        <li class="navnik-item"><a href="#contacto" class="font-navitem">CONTACTO</a></li>
 			      </ul>
 			    </div>
 			  </nav>
 			   <ul class="sidenav" id="mobile-demo">
-			    <li><a href="">INICIO</a></li>
-			    <li><a href="">BENEFICIOS</a></li>
-			    <li><a href="">COMPONENTES</a></li>
-			    <li><a href="">NOSOTROS</a></li>
-			    <li><a href="">CONTACTO</a></li>
+			    <li><a href="#inicio">INICIO</a></li>
+			    <li><a href="#beneficios">BENEFICIOS</a></li>
+			    <li><a href="#componentes">COMPONENTES</a></li>
+			    <li><a href="#nosotros">NOSOTROS</a></li>
+			    <li><a href="#contacto">CONTACTO</a></li>
 			  </ul>
 		</header>
-		<section id="banners">
+		<section>
 			<div class="carousel carousel-slider">
-    			<a class="carousel-item" href="#one!"><img src="Banners-01.png"></a>
-    			<a class="carousel-item" href="#two!"><img src="Banners-02.png"></a>
-    			<a class="carousel-item" href="#three!"><img src="Banners-03.png"></a>
+    			<a class="carousel-item" href="#one!"><img src="images/Banners/Banners_01.png"></a>
+    			<a class="carousel-item" href="#two!"><img src="images/Banners/Banners-02.png"></a>
+    			<a class="carousel-item" href="#three!"><img src="images/Banners/Banners-03.png"></a>
+    			<a class="carousel-item" href="#four!"><img src="images/Banners/Banners_01.png"></a>
   			</div>
 		</section>
-		<section>
-			<h2>Emulgel Refrescante</h2>
+		<section id="beneficios">
+<h2 style="text-align: center">Emulgel Refrescante</h2>
+<div class="row">
+	<div class="col s1">
+		<p class="subtitle-verticalp">B E N E F I C I O S  |  P R O P I E D A D E S</p>		
+	</div>
+	<div class="col s3">
+		<h3>Componentes naturales</h3>
+		<p>Emulgel a base de componentes naturales que disminuyen el dolor para un alivio sostenido.</p>		
+	</div>
+	<div class="col s3">
+		<h3>Disminuye molestias de dolores musculares</h3>
+		<p>Torceduras, lesiones deportivas y pies cansados.</p>		
+	</div>
+	<div class="col s3">
+		<h3>Sensación de frescura </h3>
+		<p>Su aplicación en la piel deja una sensación de frescura y no grasa.</p>	
+	</div>
+</div>
 		</section>
+		<section id="componentes"></section>
+		<section id="nosotros"></section>
 		<footer>
-			
+			<section id="contacto">
+				
+			</section>
 		</footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+		<script src="js/materialize.js"></script>
 	</body>
 </html>
