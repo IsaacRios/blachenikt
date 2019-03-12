@@ -8,7 +8,6 @@ nav{
 }
 .black-text{
 	color:black;
-	background-color: grey;
 }
 .btnorange{
 	background-color: #F58C24;
@@ -31,12 +30,40 @@ nav{
 	padding-left: 25px;
 	padding-right: 25px;
 }
+.btngreen2{
+	background-color: #79BAAC;
+	border-radius: 30px;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: capitalize;
+	padding-top: 3%;
+	padding-bottom: 9%;
+	width: 190px;
+	height: 60px;
+}
+.btnSend{
+	background-color: #79BAAC;
+	border-radius: 20px;
+	font-size: 2.5em;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: capitalize;
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+	height: 55px;
+}
 .card-hover:hover{
 	border: 2px solid lightgray;
 }
+.cardscenter{
+	padding-left: 5%;
+}
 .card-content{
-	min-height: 200p
-	x;
+	min-height: 200px;
 }
 .card-image{
 	min-width: 50px; 
@@ -49,6 +76,47 @@ nav{
 	 display: block;
   margin-left: auto;
   margin-right: auto;
+}
+.cardsquare{
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	 display: block;
+	  margin-left: auto;
+  margin-right: auto;
+}
+.cardfooter{
+	margin-top: -70px;
+	padding-top: 30px;
+	width: 256px;
+	height: 256px;
+}
+.cardTextBlack{
+	color: #595959;
+	text-transform:capitalize;
+}
+.cardTextBlack2{
+	color: #595959;
+	text-transform:lowercase ;
+}
+.imagesquare{
+	width: 100%;
+	height: auto;
+}
+.container-city{
+	border: solid #79BAAC 1px;
+	color: #F58C24; 
+	font-size: 2em;
+	margin: auto;
+	margin-bottom: 5%;
+	margin-top: 10%;
+	text-align: center;
+}
+.container-city:hover{
+	border: 1px solid lightgray;
+}
+.colUp{
+	margin-top: -75px;
 }
 .emulgel{
 	background-color: #79BAAC;
@@ -76,6 +144,24 @@ nav{
 		font-size: 1.2em;
 		color: black;
 }
+.formcontact{
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+.formFinal {
+	background-color: white;
+	border: lightgrey solid 2px;
+	border-radius: 20px;
+
+}
+.misionvisionBG{
+	background-image: url('../images/Backgrounds/Imagen-13.png');
+	background-position: center; /* Center the image */
+  	background-repeat: no-repeat; /* Do not repeat the image */
+  	background-size: cover;
+  	height: 800px;
+}
 .nav-icon-burger{
 		color: darkgrey;
 }
@@ -83,6 +169,35 @@ nav{
 	padding-top: 30px;
 	margin-right: 35px;
 	margin-left: 25px;
+}
+.listorange{
+	list-style-type: disc;
+	color: orange;
+	
+}
+.li-text{
+	color:black;	
+	font-size: 13px;
+	text-align: justify;
+	margin-bottom: 10px;
+}
+.lineAbajo{
+	border-bottom: 1px solid black;
+	padding-bottom: 35px;
+}
+.lineaLado{
+	border-left: 1px solid black;
+}
+.SubtitleGreen{
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #79BAAC;
+	margin-left: 9%;
+}
+.SubtitleGreen2{
+	font-size: 2.5em;
+	font-weight: bold;
+	color: #79BAAC;
 }
 .subtitle-verticalp{
 	writing-mode: vertical-lr;
@@ -93,6 +208,12 @@ nav{
 	color: #ADADAD;
 	letter-spacing: 2px;
 	text-align: center;
+}
+.mision{
+	font-size: 16px;
+	text-align: justify;
+	text-justify: inter-word;
+
 }
 .titlebeneficios{
 	text-align: center;
@@ -113,5 +234,11 @@ nav{
 
 }
 #contacto{
-
+	background: url('../images/Backgrounds/Imagen-12.png');
+	background-position: left;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-origin: border-box;
+  	height: 1300px;
+  	margin-top: -75px;
 }

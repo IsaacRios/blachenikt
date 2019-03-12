@@ -2596,14 +2596,7 @@ textarea {
   font-family: -apple-system, BlinkMacSystemFont, Noto Serif SC, "Helvetica Neue", serif;
 }
 
-ul:not(.browser-default) {
-  padding-left: 0;
-  list-style-type: none;
-}
 
-ul:not(.browser-default) > li {
-  list-style-type: none;
-}
 
 a {
   color: #039be5;
@@ -6105,19 +6098,19 @@ label {
    ========================================================================== */
 /* Style Placeholders */
 ::-webkit-input-placeholder {
-  color: #d1d1d1;
+  color: #595959;
 }
 ::-moz-placeholder {
-  color: #d1d1d1;
+  color: #595959;
 }
 :-ms-input-placeholder {
-  color: #d1d1d1;
+  color: #595959;
 }
 ::-ms-input-placeholder {
-  color: #d1d1d1;
+  color: #595959;
 }
 ::placeholder {
-  color: #d1d1d1;
+  color: #595959;
 }
 
 /* Text inputs */
