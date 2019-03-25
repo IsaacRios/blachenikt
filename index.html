@@ -3,12 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta name="description" content="Balché Nikté. Cosméticos de origen natural con altos estándares de calidad">
+		<meta name="description" content="Balché Nikté. Cosméticos de origen natural con altos estándares de calidad.">
 		<title>Balché Nikté</title>
 		<link rel='shorcut icon' href='images/bn.png' type='image/png'>
 		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 		<link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
 		<link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:200,300,400,500,600,700,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="stylesheet" href=" css/fonts.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -16,17 +17,24 @@
 			$(document).ready(function(){
 			 	$('.carousel.carousel-slider').carousel({
 				    fullWidth: true,
-				    indicators: true
+				    indicators: false,
 				  });
     			$('.sidenav').sidenav();
-		  });
+    			$('.modal').modal();
+    		 });
+		</script>
+    	<script>
+				 $(document).ready(function(){
+				    $('#modal1').modal();
+				    $('#modal1').modal('open'); 
+				 });
 		</script>
 	</head>
 	<body>
 		<header id="inicio">
 			  <nav>
 			    <div class="nav-wrapper">
-			    	<a href="#" class="brand-logo brand-nik"><img src="images/logobalche.png" alt="logobalche" height="125px"></a>
+			    	<a href="#modal1" class="brand-logo brand-nik modal-trigger"><img src="images/logobalche.png" alt="logobalche" height="125px"></a>
       				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons nav-icon-burger">menu</i></a>
 			      <ul id="nav-mobile" class="right hide-on-med-and-down">
 			        <li class="navnik-item"><a href="#inicio" class="font-navitem">INICIO</a></li>
@@ -45,19 +53,90 @@
 			    <li><a href="#contacto">CONTACTO</a></li>
 			  </ul>
 		</header>
+<!--- Popup -->
+		<div>
+			  <!-- Modal Structure -->
+			  <div id="modal1" class="modal modal-fixed-footer">
+			    <div class="modal-content">
+			      <div class="row">
+						<div class="formFinal col s6 m5 l5">
+							<input placeholder="     Nombre*" id="fullname" type="text" class="validate" style="border: 0;">
+							<label for="fullname"></label>
+						</div>
+						<div class="col m1 l2">
+							
+						</div>
+						<div class="formFinal col s6 m5 l5">
+							<input placeholder="     Teléfono*" id="telephone"type="tel" class="validate" style="border: 0;">
+          					<label for="telephone"></label>
+						</div>
+					</div>
+					<div class="formFinal ">
+						<input placeholder="     Correo" id="email" type="email" class="validate" style="border: 0;">
+          				<label for="email"></label>
+					</div>
+					<div class="formFinal " style="height: 80px">
+						<textarea placeholder="     Mensaje" id="mensaje" class="materialize-textarea" data-length="120" style="border: 0; "></textarea>
+		            	<label for="mensaje"></label>
+					</div>
+			    </div>
+			    <div class="modal-footer">
+			      <a href="#!" class="modal-close waves-effect waves-orange orange btn-flat">Enviar</a>
+			      <a href="#!" class="modal-close waves-effect btn-flat">Cerrar</a>
+			    </div>
+			  </div>
+		</div>
 		<section>
 			<div class="carousel carousel-slider">
-    			<a class="carousel-item" href="#one!"><img src="images/Banners/Banners_01.png"></a>
-    			<a class="carousel-item" href="#two!"><img src="images/Banners/Banners-02.png"></a>
-    			<a class="carousel-item" href="#three!"><img src="images/Banners/Banners-03.png"></a>
-    			<a class="carousel-item" href="#four!"><img src="images/Banners/Banners_01.png"></a>
+				<div class="arrows1">
+					<i class="material-icons arrowl">arrow_back</i>
+					<i class="material-icons arrowr">arrow_forward</i>
+				</div>
+				<div class="carousel-item" href="#one!">
+					<div class="carouselOne">
+						<h3 class="subtitleBlack">Balché Nikté</h3>
+						<p style="color: #6b6968">Cosméticos de origen natural con altos estándares de calidad.</p>
+						<br>
+						<a href="#beneficios" class="waves-effect btngreen btn">Conoce los beneficios</a>
+					</div>
+				<img src="images/Banners/Banners_01.png">
+				</div>
+				<div class="carousel-item" href="#two!">
+					<div class="carouselOne1">
+						<h3 class="subtitleBlack">Emulgel Refrescante</h3>
+						<p><span class="carouselTexts">Con componentes naturales</span></p>
+						<p style="color: #6b6968">Disminuye los dolores musculares, torceduras, lesiones deportivas y pies cansados. </p>
+						<br>
+						<a href="#contacto" class="waves-effect btnorange btn">Ordena</a>
+					</div>
+					<img src="images/Banners/Banners-02.png">
+				</div>
+				<div class="carousel-item" href="#three!">
+					<div class="carouselOne1">
+						<h3 class="subtitleBlack">Balché Nikté</h3>
+						<p><span class="carouselTexts">Respetamos el medio ambiente</span></p>
+						<p style="color: #6b6968">Procesos productivos empleando materiales de alta calidad, respetuosos con el entorno natural y social.</p>
+						<br>
+						<a href="#contacto" class="waves-effect btngreen btn">Contáctanos</a>
+					</div>
+					<img src="images/Banners/Banners-03.png">
+				</div>
+				<div class="carousel-item" href="#four!">
+					<div class="carouselOne">
+						<h3 class="subtitleBlack">Balché Nikté</h3>
+						<p style="color: #6b6968"><span class="carouselTexts">Producto 100% Mexicano</span></p>
+						<br>
+					</div>
+					<img src="images/Banners/Banners_01.png">
+				</div>
   			</div>
 		</section>
 		<section id="beneficios">
 			<h2 class="titlebeneficios">Emulgel Refrescante</h2>
 			<div class="row">
-				<div class="col s1 m1">
-					<p class="subtitle-verticalp">B E N E F I C I O S  |  P R O P I E D A D E S</p>		
+				<div class="col s1 m1" style="margin-right: 5%;">
+					<p class="subtitle-verticalp">
+					B E N E F I C I O S  |  P R O P I E D A D E S</p>		
 				</div>
 				<div class="col s6 m3">
 					<div class="card card-hover">
@@ -65,7 +144,7 @@
 					       <img src="images/Iconos/Iconos-04.png" alt="iconGreen">
 					    </div>
 				        <div class="card-content ">
-				        	<h4 class="card-title">Componentes naturales</h4>
+				        	<h4 class="card-title"><span class="font-bold">Componentes naturales</span></h4>
 				            <p class="font-card">Emulgel a base de componentes naturales que disminuyen el dolor para un alivio sostenido.
 				            <p>
 					    </div>
@@ -77,7 +156,7 @@
 							<img src="images/Iconos/Iconos-05.png" alt="iconComponentes">
 						</div>
 						<div class="card-content">
-							<h4 class="card-title">Disminuye molestias de dolores musculares</h4>
+							<h4 class="card-title"><span class="font-bold">Disminuye molestias de dolores musculares</span></h4>
 							<p class="font-card">Torceduras, lesiones deportivas y pies cansados.</p>		
 						</div>
 					</div>
@@ -88,8 +167,8 @@
 							<img src="images/Iconos/Iconos-06.png" alt="iconComponentes">
 						</div>
 						<div class="card-content">
-							<h4 class="card-title">Sensación de frescura</h4>
-							<p class="font-card">Su aplicación en la piel deja una sensación de frescura y no grasa.</p>		
+							<h4 class="card-title"><span class="font-bold">Sensación de frescura</span></h4>
+							<p class="font-card">Su aplicación en la piel deja una sensación de frescura y no grasa.</p>
 						</div>
 					</div>
 				</div>
@@ -97,62 +176,173 @@
 		</section>
 		<section id="componentes">
 			<div class="row">
-				<div class="col m1">
-					<p class="subtitle-verticalp">C O M P O N E N T E S   N A T U R A L E S</p>					
+				<div class="col s1 m1">
+					<p class="subtitle-verticalp">C O M P O N E N T E S &nbsp;  N A T U R A L E S</p>					
 				</div>
 				<div class="col s11 m11">
-				  <div class="carousel carousel-slider center">
-				    <div class="carousel-fixed-item center">
-				      <a class="btn waves-effect white grey-text darken-text-2">button</a>
+				  <div class="carousel carousel-slider ">
+				  	<div class="arrows1">
+						<i class="material-icons arrowl">arrow_back</i>
+						<i class="material-icons arrowr">arrow_forward</i>
+					</div>
+				    <div class="carousel-item" href="#one!">
+					 <div class="row">
+					 	<div class="col s6 m6" style="padding-left: 5%">
+					 		<div style="text-align: left">
+					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">Cúrcuma</span></h4>
+					 			<p>(Cúrcuma Longa):	</p>
+					 		</div>					 		
+					 		<div>
+					 			<p><span class="text-carousel4">Su contenido de curcuminoides, especialmente la curcumina; le confieren propiedades antiinflamatorias, antioxidantes, antimicrobianas y cicatrizantes. 
+					 			</span></p>
+					 		</div>
+					      <div style="text-align: left; margin-top: 50px;">
+					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+					      </div>
+					 	</div>
+					 	<div class="col s6 m6">
+					 		<img class="img-carousel-aceites" src="images/Aceites/1curcuma.png" alt="curcuma image">
+					 	</div>
+					 	<!-- <i class="material-icons flechas">arrow_forward</i>-->
+					 </div>
+					</div>
+					 <div class="carousel-item" href="#two!">
+					   <div class="row">
+					 	<div class="col s6 m6" style="padding-left: 5%">
+					 		<div style="text-align: left">
+					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">sésamo</span></h4>
+					 			<p>(Sesamum indicum):</p>
+					 		</div>					 		
+					 		<div>
+					 			<p><span class="text-carousel4">además de hidratante; regenera, reestructura y suaviza la piel.
+					 			</span></p>
+					 		</div>
+					      <div style="text-align: left; margin-top: 50px;">
+					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+					      </div>
+					 	</div>
+					 	<div class="col s6 m6">
+					 		<img class="img-carousel-aceites" src="images/Aceites/2sesamo.png" alt="sesamo image">
+					 	</div>
+					 </div>
 				    </div>
-				    <div class="carousel-item black-text" href="#one!">
-				    	<img src="images/Aceites/1curcuma.png" alt="curcuma image">
-				      <h2>Aceite de Cúrcuma (Cúrcuma Longa)</h2>
-				      <p class="black-text">su contenido de curcuminoides, especialmente la curcumina; le confieren propiedades antiinflamatorias, antioxidantes, antimicrobianas y cicatrizantes. </p>
+				    <div class="carousel-item " href="#three!">
+					  <div class="row">
+					 	<div class="col m6" style="padding-left: 5%">
+					 		<div style="text-align: left">
+					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">rosa mosqueta</span></h4>
+					 			<p>(Rosa rubiginosa):</p>
+					 		</div>					 		
+					 		<div>
+					 			<p><span class="text-carousel4">función regeneradora y cicatrizante.
+					 			</span></p>
+					 		</div>
+					      <div style="text-align: left; margin-top: 50px;">
+					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+					      </div>
+					 	</div>
+					 	<div class="col s6 m6">
+					 		<img class="img-carousel-aceites" src="images/Aceites/2Rosamosqueta.png" alt="rosa image">
+					 	</div>
+					 </div>
 				    </div>
-				    <div class="carousel-item amber white-text" href="#two!">
-				      <h2>Second Panel</h2>
-				      <p class="white-text">This is your second panel</p>
+				    <div class="carousel-item " href="#four!">
+ 					  <div class="row">
+					 	<div class="col s6 m6" style="padding-left: 5%">
+					 		<div style="text-align: left">
+					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">albaricoque</span></h4>
+					 			<p>(Prunus armeniaca):</p>
+					 		</div>					 		
+					 		<div>
+					 			<p><span class="text-carousel4">
+					 				aceite ligero rico en Vitamina A y E, rico en ácidos grasos poliinsaturados y en minerales; con propiedades calmantes, regeneradoras de tejido y tonificantes.
+					 			</span></p>
+					 		</div>
+					      <div style="text-align: left; margin-top: 50px;">
+					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+					      </div>
+					 	</div>
+					 	<div class="col s6 m6">
+					 		<img class="img-carousel-aceites" src="images/Aceites/4Albaricoque.png" alt="albaricoque">
+					 	</div>
+					 	<!-- <i class="material-icons flechas">arrow_forward</i>-->
+					 </div>
 				    </div>
-				    <div class="carousel-item green white-text" href="#three!">
-				      <h2>Third Panel</h2>
-				      <p class="white-text">This is your third panel</p>
+				    <div class="carousel-item " href="#five!">
+					   <div class="row">
+					 	<div class="col m6" style="padding-left: 5%">
+					 		<div style="text-align: left">
+					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">eucalipto</span></h4>
+					 			<p>(Eucalyptus globulus):</p>
+					 		</div>					 		
+					 		<div>
+					 			<p><span class="text-carousel4">
+					 				sus principales componentes; cineol, flavonoides y taninos tiene propiedades antiinflamatorias, antisépticas y cicatrizantes.
+					 			</span></p>
+					 		</div>
+					      <div style="text-align: left; margin-top: 50px;">
+					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+					      </div>
+					 	</div>
+					 	<div class="col s6 m6">
+					 		<img class="img-carousel-aceites" src="images/Aceites/5Eucalipto.png" alt="eucalipto">
+					 	</div>
+					 </div>
 				    </div>
-				    <div class="carousel-item blue white-text" href="#four!">
-				      <h2>Fourth Panel</h2>
-				      <p class="white-text">This is your fourth panel</p>
-				    </div>
-				  </div>
-				</div>
-			</div>
+				    <div class="carousel-item " href="#six!">
+					   <div class="row">
+					 	<div class="col s6 m6" style="padding-left: 5%">
+					 		<div style="text-align: left">
+					 			<h4 class="SubtitleGreen3">Aceite de Winter Green</h4>
+					 			<p>(Gaultheria procumbens):</p>
+					 		</div>					 		
+					 		<div>
+					 			<p><span class="text-carousel4">
+					 				estimula la circulación sanguínea alrededor de los tejidos afectados.
+					 			</span></p>
+					 		</div>
+					      <div style="text-align: left; margin-top: 50px;">
+					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+					      </div>
+					 	</div>
+					 	<div class="col s6 m6">
+					 		<img class="img-carousel-aceites" src="images/Aceites/6WinterGreen.png" alt="wintergreen">
+					 	</div>
+					 </div> <!--Row  -->
+				    </div> <!--item 6  -->
+				    </div> <!--  Carousel slider-->
+				    <div class="componentesBG">
+				    </div> <!-- Fondo plantas -->
+				    </div> <!-- col  -->
+				  </div> <!-- Row -->
 		</section>
 		<div class="emulgel">
 			<p>Emulgel Refrescante <br> $120.00</p>
-			<a class="waves-effect btnorange btn">Compra ahora</a>
+			<a href="#contacto" class="waves-effect btnorange btn">Compra ahora</a>
 		</div>
 		<div class="emulgel5">
 			<p>Adquiere 5 emulgel refrescante y el sexto es GRATIS.</p>
-			<a class="waves-effect btngreen btn">Ordena ahora</a>
+			<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
 		</div>
 		<section id="nosotros">
-			<div class="row">
-				<p class="SubtitleGreen">Centro de Distribución en</p>
-				<div class="col s1 m1 colUp">
-					<p class="subtitle-verticalp">C E N T R O S   D E   D I S T R I B U C I Ó N</p>					
+			<div class="row" >
+				<p class="SubtitleGreen" style="padding-left: 5%;">Centro de Distribución en</p>
+				<div class="col s1 m1 colUp" style="margin-right: 5%;">
+					<p class="subtitle-verticalp" >C E N T R O S  &nbsp; D E &nbsp; D I S T R I B U C I Ó N</p>		
 				</div>
-				<div class="col s3 m3">
+				<div class="col s6 m4 l3" >
 					<div class="container-city">
-						<p>Quéretaro</p>
+						<p><span class="font-bold">Quéretaro</span></p>
 					</div>
 				</div>
-				<div class="col s4 m3">
+				<div class="col s6 m4 l3">
 					<div class="container-city">
-						<p>Cuernavaca</p>
+						<p><span class="font-bold">Cuernavaca</span></p>
 					</div>
 				</div>
-				<div class="col s4 m3">
+				<div class="col s6 m4 l3">
 					<div class="container-city">
-						<p>Guadalajara</p>
+						<p><span class="font-bold">Guadalajara</span></p>
 					</div>
 				</div>
 			<!-- </div> -->
@@ -160,37 +350,36 @@
 				<div class="col s1 m1">
 					
 				</div>
-				<div class="col s3 m3">
+				<div class="col s10 m4 l3">
 					<div class="container-city">
-						<p>Durango</p>
+						<p><span class="font-bold">Durango</span></p>
 					</div>
 				</div>
-				<div class="col s4 m3">
+				<div class="col s10 m6 l3">
 					<div class="container-city">
-						<p>Tabasco</p>
+						<p><span class="font-bold">Tabasco</span></p>
 					</div>
 				</div>
-				<div class="col s4 m3">
+				<div class="col s10 m6 l3">
 					<div class="container-city">
-						<p>CDMX</p>
+						<p><span class="font-bold">CDMX</span></p>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<div class="col m6 misionvisionBG">
+				<div class="col m6 s1 misionvisionBG">
 
 				</div>
-				<div class="col m6" style="padding-left: 50px; padding-right: 120px;">
+				<div class="col m6 s11" style="padding-left: 50px; padding-right: 120px;">
 					<div class="row">
 						<h5 class="SubtitleGreen2 ">Misión.</h5>
 						<p class="mision lineAbajo">Ser una empresa mexicana dedicada al desarrollo, producción y comercialización de productos cosméticos de origen natural, para el cuidado e higiene personal, que sean altamente competitivos en calidad, eficacia, precio y seguridad, manteniendo con ello los altos estándares en los procesos de elaboración.</p>
 						<div class="col m6">
 							<h5 class="SubtitleGreen2">Visión.</h5>
 							<p class="mision">Ser referencia y líder en el mercado nacional y regional de fabricantes de productos cosméticos de origen natural, así como la primera elección de un producto natural para nuestros clientes, con la tendencia de lograr un crecimiento constante en mercados internacionales.</p>
-							<a class="waves-effect btngreen2 btn">Contáctanos</a>
-
+							<a href="#contacto" class="waves-effect btngreen2 btn">Contáctanos</a>
 						</div>
-						<div class="col m6 lineaLado">
+						<div class="col m6 s12 lineaLado">
 							<h5 class="SubtitleGreen2">Valores.</h5>
 							<ul>
 								<li class="listorange"><p class="li-text">Respeto por el medio ambiente: productos, materiales y procedimientos respetuosos con nuestro entorno.</p></li>
@@ -202,75 +391,109 @@
 					</div>
 				</div>
 			</div>
+		<div id="testimonios">
 			<div class="row">
 				<div class="col s1 m1">
 					<p class="subtitle-verticalp">T E S T I M O N I O S</p>					
 				</div>
-				<div class="col s11 m11">
-					  <div class="carousel carousel-slider center">
-					    <div class="carousel-fixed-item center">
-					      <a class="btn waves-effect white grey-text darken-text-2">button</a>
-					    </div>
+				<div class="col s11 m10">
+					  <div class="carousel carousel-slider center shadow">
+					  		<div class="arrows1">
+								<i class="material-icons  arrowl">arrow_back</i>
+								<i class="material-icons  arrowr">arrow_forward</i>
+							</div>
+							<div class="carousel-fixed-item" >
+								<img class="comillotas1" src="images/Comillas-01.png" alt="comillas1" >
+							</div>
+							<div class="carousel-fixed-item" >
+								<img class="comillotas2" src="images/Comillas-02.png" alt="comillas2" >
+							</div>
 					    <div class="carousel-item" href="#one!">
-					      <h2>José Luis</h2>
-					      <p>Lo use para un dolor en la espalda, antes de dormir y la sensación es agradable... dormí sin problema.</p>
+					      <div class="carousel_container">
+					      	<div class="text-container-carousel3">
+					      		<h4 class="SubtitleGreen3">José Luis</h4>
+					      		<p>
+					      		<span  class="text-carousel3">Lo use para un dolor en la espalda, antes de dormir y la sensación es agradable... dormí sin problema.</span>
+					      		</p>
+					      	</div>		      		
+					      </div>
 					    </div>
-					    <div class="carousel-item amber white-text" href="#two!">
-					      <h2>Ángel Sánchez </h2>
-					      <p class="white-text">Lo utilice después de una caminata larga en las piernas y descanse riquísimo...</p>
+					    <div class="carousel-item" href="#two!">
+					    	<div class="carousel_container">
+					      	<div class="text-container-carousel3">
+					      		<h4 class="SubtitleGreen3">Ángel Sánchez </h4>
+							      <p>
+					      		<span  class="text-carousel3">Lo utilice después de una caminata larga en las piernas y descanse riquísimo...</span>
+					      		</p>
+					      	</div>
+							</div>
 					    </div>
-					    <div class="carousel-item green white-text" href="#three!">
-					      <h2>Gustavo Pérez</h2>
-					      <p class="white-text">Después de una jornada ardua en el gimnasio lo aplique en mis brazos y eliminó el dolor.</p>
+					    <div class="carousel-item" href="#three!">
+					    	<div class="carousel_container">
+						      	<div class="text-container-carousel3">
+						      		<h4 class="SubtitleGreen3">Gustavo Pérez</h4>
+						      		<p>
+						      		<span  class="text-carousel3">Después de una jornada ardua en el gimnasio lo aplique en mis brazos y eliminó el dolor.</span>
+						      		</p>
+						      	</div>		      		
+					      </div>
 					    </div>
-					    <div class="carousel-item blue white-text" href="#four!">
-					      <h2>Rosalba Ramírez</h2>
-					      <p class="white-text">Después de un accidente en coche mi hija me dio un masaje con el producto en la espalda y me quitó el dolor.</p>
+					    <div class="carousel-item " href="#four!">
+							<div class="carousel_container">
+						      	<div class="text-container-carousel3">
+						      		<h4 class="SubtitleGreen3">Rosalba Ramírez</h4>
+						      		<p>
+						      		<span  class="text-carousel3">Después de un accidente en coche mi hija me dio un masaje con el producto en la espalda y me quitó el dolor.</span>
+						      		</p>
+						      	</div>		      		
+					      </div>
 					    </div>
 					  </div>
+					  <div class="testimoniosBG"></div>	
 				</div>
 			</div>
+		</div> <!-- ID testimonios-->
 		</section>
 		<div>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.0604154481894!2d-99.09874708561756!3d19.452961845071194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fbe158085d7d%3A0xcff14fcaa5538d50!2sCalle+Cairo+321%2C+Fernando+Casas+Alem%C3%A1n%2C+07960+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses!2smx!4v1552033094379" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 		<div class="row cardscenter">
-			<div class="col s12 m6 l3">
+			<div class="col s6 m6 l3">
 				<div class="card cardfooter">
 			        <div class="card-image cardsquare">
 			          <img src="images/Iconos/Iconos-07.png">
 			        </div>
-			        <div class="card-action" style="text-align: center">
+			        <div class="card-action" style="text-align: center; border-top: white solid 2px;">
 			          <a href="#"><span class="cardTextBlack">26 03 06 44</span></a>
 			        </div>
 		      </div>
 			</div>
-			<div class="col s12 m6 l3">
+			<div class="col s6 m6 l3">
 				<div class="card cardfooter">
 			        <div class="card-image cardsquare">
 			          <img src="images/Iconos/Iconos-08.png">
 			        </div>
-			        <div class="card-action" style="text-align: center">
+			        <div class="card-action" style="text-align: center; border-top: white solid 2px;">
 			          <a href="#"><span class="cardTextBlack">56 11 46 30 60</span></a>
 			        </div>
 		      	</div>
 			</div>
-			<div class="col s12 m6 l3">
+			<div class="col s6 m6 l3">
 				<div class="card cardfooter">
 			        <div class="card-image cardsquare">
 			          <img src="images/Iconos/Iconos-09.png">
 			        </div>
-			        <div class="card-action" style="text-align: center">
+			        <div class="card-action" style="text-align: center; border-top: white solid 2px;">
 			          <a href="#"><span class="cardTextBlack2">contacto@balchenikte.com</span></a>
 			        </div>
 		      	</div>
 			</div>
-			<div class="col s12 m6 l3">
+			<div class="col s6 m6 l3">
 				<div class="card cardfooter">
 			        <div class="card-image cardsquare">
 			          <img src="images/Iconos/Iconos-10.png">
 			        </div>
-			        <div class="card-action" style="text-align: center">
+			        <div class="card-action" style="text-align: center; border-top: white solid 2px;">
 			          <a href="#"><span class="cardTextBlack">Cairo 321 Fernando Casas Alemán CP 07960 Gustavo A. Madero</span></a>
 			        </div>
 		      	</div>
@@ -280,33 +503,186 @@
 			<section id="contacto">
 				<div class="formcontact">
 					<h2 class="SubtitleGreen2">Balché Nikté</h2>
-					<p class="cardTextBlack" style="font-size: 22px;">Respetamos el medio ambiente</p>
+					<p class="cardTextBlack" style="font-size: 18px;"><b> Respetamos el medio ambiente</b></p>
 					<div class="row">
 						<div class="formFinal col s6 m5 l5">
-							<input placeholder="Nombre" id="fullname" type="text" class="validate">
+							<input placeholder="     Nombre*" id="fullname" type="text" class="validate"  style="border: 0;">
 							<label for="fullname"></label>
 						</div>
-						<div class="col m1 l2">
+						<div class="col m1 l1">
 							
 						</div>
-						<div class="formFinal col s6 m5 l5">
-							<input placeholder="Teléfono" id="telephone"type="tel" class="validate">
+						<div class="formFinal col s6 m5 l6">
+							<input placeholder="     Teléfono*" id="telephone"type="tel" class="validate" style="border: 0;">
           					<label for="telephone"></label>
 						</div>
 					</div>
 					<div class="formFinal ">
-						<input placeholder="Correo" id="email" type="email" class="validate">
+						<input placeholder="     Correo" id="email" type="email" class="validate" style="border: 0;">
           				<label for="email"></label>
 					</div>
-					<br>
-					<div class="formFinal ">
-						<textarea placeholder="Mensaje" id="mensaje" class="materialize-textarea" data-length="120"></textarea>
+					<div class="formFinal" style="height: 200px;">
+						<textarea placeholder="     Mensaje" id="mensaje" class="materialize-textarea" data-length="120" style="border: 0; "></textarea>
 		            	<label for="mensaje"></label>
 					</div>
 					<br>
-						<a href="" class="btn btnSend">Enviar</a>
+						<a href="#contacto" class="btn btnSend">Enviar</a>
+
 				</div>
+				<div class="contactoBG"></div>
 			</section>
+			<div>
+			<div class="footerOrange center">
+					<a class=" modal-trigger" href="#modal2" style="color: white">Aviso de privacidad</a>
+			</div>
+
+			  <!-- Modal Structure -->
+			  <div id="modal2" class="modal">
+			    <div class="modal-content">
+
+			      <h4>AVISO DE PRIVACIDAD</h4>
+
+<h5>TÉRMINOS Y CONDICIONES</h5>
+<p>
+Gracias por acceder al sitio propiedad de OXIUM MEXICO S. de R. L. de C.V. en donde nos preocupamos por respetar los derechos de privacidad de nuestros clientes y visitantes y en donde nos tomamos muy en serio el derecho de las personas para decidir el uso que se debe de dar a sus datos personales y a su derecho a la privacidad.
+</p>
+<p>
+Esta política de privacidad explica cómo recopilamos, el uso que se le da y (en determinadas condiciones) como divulgamos su información personal.
+</p>
+<p>
+Esta Política de Privacidad también explica los pasos que hemos tomado para proteger su información personal. Por último, esta política de privacidad explica las opciones relativas a la recolección, uso y divulgación de su información personal. Al visitar el sitio directamente o a través de otro sitio, usted acepta las prácticas descritas en esta Política.
+</p>
+<p>
+Esta política de privacidad se aplica al sitio. Esta política de privacidad no se aplica necesariamente a cualquier colección de su información personal fuera de línea.
+<br>
+Por favor, ver más abajo para más detalles.
+</p>
+<p>
+No somos responsables por el contenido o prácticas de privacidad en cualquier sitio web que no dependa de OXIUM MEXICO S. de R. L. de C.V., y al que el sitio enlace o que enlace al sitio.
+</p><p>
+OXIUM MEXICO S. de R. L. de C.V., y / o sus filiales o subsidiarias aplicarán la siguiente política sobre la gestión de los datos que proporciona, con sujeción a los términos y condiciones siguientes:
+</p>
+<h5>INFORMACIÓN QUE RECOLECTAMOS Y USAMOS</h5>
+<p>
+1. Recopilación de información.
+<br>
+2. De acuerdo a lo Previsto en la “Ley Federal de Protección de Datos Personales”, declara OXIUM MEXICO S. de R. L. de C.V., ser una empresa legalmente constituida de conformidad con las leyes mexicanas, con domicilio en 22 SUR 4302 INTERIOR 3 COLONIA EL MIRADOR CP 72250 PUEBLA, PUEBLA .; y como responsable del tratamiento de sus datos personales, hace de su conocimiento que la información de nuestros clientes es tratada de forma estrictamente confidencial por lo que al proporcionar sus datos personales, tales como:
+<br>
+1. Nombre Completo.
+<br>
+2. Dirección.
+<br>
+3. Registro Federal de Contribuyentes.
+<br>
+4. Teléfonos de Hogar, Oficina y móviles.
+<br>
+5. Correo Electrónico.
+<br>
+Estos serán utilizados única y exclusivamente para los siguientes fines:
+<br>
+1. Campañas de Publicidad.
+<br>
+2. Campañas de Fidelidad.
+<br>
+3. Información y Prestación de Servicios.
+<br>
+4. Actualización de la Base de Datos.
+<br>
+5. Cualquier finalidad análoga o compatible con las anteriores.
+<br>
+En el caso de Datos sensibles, tales como:
+<br>
+1. Datos Financieros (Ingresos, Estados de Cuenta, y demás relacionados).
+<br>
+2. Datos Patrimoniales (Bienes Materiales, Inmuebles, y demás relacionados).
+<br>
+3. Datos Personales (Cónyuge, Estado Civil, Nacionalidad, Educación, Hijos, y demás relacionados).
+<br>
+4. Referencias familiares y no familiares (Nombre, Dirección, Teléfono, relación, etc.).
+<br>
+Estos serán utilizados única y exclusivamente para los siguientes fines:
+<br>
+1. Investigación y/u Obtención de Créditos ante las Instituciones Financieras.
+<br>
+2. Cualquier finalidad análoga o compatible con la anterior.
+<br>
+Nosotros recopilamos información sobre usted de maneras diferentes en este sitio. Uno de los objetivos en la recolección de información personal de usted, es para ofrecerle una experiencia eficiente, significativa y personalizada. Por ejemplo, podemos utilizar su información personal para:
+<br>
+ Ayudar a que el sitio sea más fácil para su uso al no tener que introducir la información más de una vez.
+<br>
+ Ayudarle a encontrar rápidamente la información, productos y servicios.
+<br>
+ Ayudarnos a crear contenido que sea más relevante para usted.
+<br>
+ Alertarlo sobre nueva información, productos y servicios que ofrecemos.
+<br>
+(A) Registro. Antes de usar ciertas partes del sitio, usted debe completar un formulario de inscripción en línea. Durante el registro, se le pedirá que nos proporcione cierta información personal, incluyendo pero no limitado a su nombre, número de teléfono y dirección de correo electrónico. Además, también podremos pedirle su país de residencia y / o el país de operación de su organización, lo anterior a efecto de cumplir con las leyes y reglamentos aplicables. Este tipo de información personal se utiliza para fines de marketing interno.
+<br>
+(B) Direcciones de correo electrónico. Varios lugares de la Web permiten a usted introducir su dirección de correo electrónico para ciertos propósitos, incluyendo pero no limitado a: a) inscribirse en un concurso o sorteo, para solicitar que te avisemos de nuevas marcas, nuevos productos, o nuevos servicios o promociones, para inscribirse en boletines de correo electrónico y ofertas especiales. Su participación en un concurso o sorteo es completamente voluntaria, así que usted tiene la opción de participar y divulgar la información para nosotros. Usamos esta información para notificar a ganadores de concursos y sorteos y premios. Podemos publicar en el sitio los nombres y ciudades de los ganadores de concursos y sorteos. Al participar en un concurso o sorteo, usted puede optar por recibir nuestro boletín electrónico y ofertas especiales y esto se comentará en las normas oficiales que rigen el concurso o sorteo.
+<br>
+(C) Cookies y otras tecnologías. Al igual que muchos sitios, el sitio utiliza cookies y web beacons (también conocida como tecnología Clear GIF o "etiquetas de acción") para que el sitio lo reconozca a usted y sus privilegios de acceso y de esta manera agilice la navegación del sitio y siga su uso del sitio.
+<br>
+(1) Las Cookies son pequeñas piezas de información que se almacenan como archivos de texto en su navegador de Internet en el disco duro de su ordenador.
+<br>
+La mayoría de los navegadores de Internet están configurados para aceptar cookies. Usted puede configurar su navegador para rechazar las cookies de sitios web o para eliminar las cookies de su disco duro, pero si lo hace, usted no será capaz de acceder o usar partes del Sitio. Es necesario usar las cookies para que pueda seleccionar los productos, colocarlos en la cesta de compra en línea, y para comprar los productos. Si usted hace esto, mantenemos un registro de su actividad de navegación y compra. LAS COOKIES DEL SITIO NO PUEDEN INFILTRARSE EN EL DISCO DURO DEL USUARIO PARA OBTENER SU INFORMACIÓN CONFIDENCIAL. Nuestras cookies no son "programas espía".
+<br>
+(1.1) Las Web beacons ayudan a entregar las cookies y nos ayudan a determinar si una página web en el sitio ha sido visitada y, en caso afirmativo, cuántas veces. Por ejemplo, cualquier imagen electrónica en el sitio, tales banners o imágenes pueden funcionar como un contador de visitantes.
+<br>
+(1.1.1) Podemos utilizar compañías de publicidad de terceros para ayudar a adaptar el contenido del sitio a los usuarios o para publicar anuncios en nuestro nombre.
+<br>
+Estas compañías pueden emplear cookies y web beacons para medir la efectividad de la publicidad (por ejemplo, qué páginas web son visitadas o qué productos se compran y en qué cantidad). Cualquier información que estos terceros recopilen a través de cookies y web beacons no está vinculada a ninguna información personal recopilada por nosotros.
+<br>
+(1.1.1.1) Por ejemplo, Facebook recolecta cierta información a través de cookies y web beacons para determinar qué páginas web son visitadas o qué productos se compran. Tenga en cuenta que cualquier información recogida por Facebook a través de cookies y web beacons no está vinculada a los datos personales de cualquier cliente recogidos por nosotros.
+<br>
+(D) Los archivos de registro. Como es el caso de la mayoría de los sitios web, el servidor del sitio reconoce automáticamente la dirección de Internet desde la cual usted accede al sitio. También puede registrar su protocolo de Internet ("IP"), proveedor de servicios de Internet, y la fecha y hora para administración del sistema, verificación de la orden, marketing interno, y los propósitos de solución de problemas. (Una dirección IP puede indicar la ubicación de su ordenador en Internet).
+<br>
+(E) Edad. Nosotros respetamos la privacidad de los niños. Nosotros a sabiendas o intencionalmente no recolectaremos información personal de niños menores de 13 años. En otras partes del sitio usted ha establecido y asegurado que o tiene18 años de edad o utiliza el sitio con la supervisión de un padre o tutor. Si usted es menor de 13 años, por favor, no envíe ninguna información personal a nosotros, y confíe en un padre o tutor para ayudarle.
+<br>
+2.- Uso de la Información y Divulgación.
+<br>
+(A) uso interno. Nosotros usamos su información personal para propósitos de servicio al cliente. Internamente podremos utilizar su información personal para mejorar el contenido de los sitios y su diseño, para mejorar el alcance y para nuestros esfuerzos de marketing (incluyendo la comercialización de nuestros servicios y productos a usted), y para determinar la información general de mercado sobre los visitantes al sitio. Con el fin de facilitar tal uso y el uso que se describe en esta sección 2, podremos compartir su información con filiales bajo el control de OXIUM MEXICO S. de R. L. de C.V.
+<br>
+(B) Comunicaciones con Usted: Nosotros usaremos su información personal para comunicarnos con usted sobre el sitio. Además, podremos enviarle un email de confirmación cuando se registre con nosotros. Podremos enviarle un anuncio relacionado con el servicio en las ocasiones que sea necesario (por ejemplo, si se debe suspender temporalmente el servicio por mantenimiento.) También, usted puede enviar su dirección de correo electrónico por razones tales como registrarse para un concurso o sorteos, para solicitar que le avisemos de nuevos productos, o promociones; para registrarse y recibir boletines informativos y ofertas especiales. Si envía su dirección de correo electrónico o teléfono, lo usaremos para entregar la información a usted. Siempre le damos la opción de darse de baja o no en futuros correos electrónicos o SMS.
+<br>
+(C) Uso externo. Queremos ofrecerle un excelente servicio y ofrecerle una gran selección. Nosotros no vendemos, alquilamos, comerciamos, licenciamos o de otra manera divulgamos su información personal o información financiera a nadie más que a los afiliados bajo el control de OXIUM MEXICO S. de R. L. de C.V., excepto que:
+<br>
+(1) Al igual que la mayoría de los minoristas de Internet, en ocasiones empleamos a terceros para realizar funciones específicas en nuestro nombre. Al momento de revelar la información con estos proveedores de servicios, damos a conocer la información que les ayude a realizar su servicio.
+<br>
+(1.1) Nosotros podremos revelar esa información en respuesta a las peticiones de los agentes del orden público que realicen investigaciones, citaciones judiciales, que cuenten con una orden judicial, o si somos requeridos a divulgar dicha información por ley. También podremos dar a conocer información personal cuya divulgación sea necesaria para proteger nuestros derechos legales, hacer cumplir nuestros Términos y Condiciones de Uso u otros acuerdos, o para protegernos a nosotros mismos o a los demás. Por ejemplo, podemos compartir información para reducir el riesgo de fraude o si alguien utiliza o intenta utilizar el sitio por razones ilegales o para cometer fraude.
+<br>
+(1.1.1) No vamos a vender (o comerciar o alquilar) información de identificación personal a otras empresas como parte de nuestro curso normal del negocio. Sin embargo, es posible que nosotros adquiramos, nos fusionemos o nos adquiera otra empresa o que podamos disponer de todos o algunos de nuestros activos. Si eso sucede, su información personal puede ser revelada a otra empresa, pero esa divulgación será sujeta a la Política de privacidad que se encuentre en vigor.
+<br>
+(1.1.1.1) Nosotros podremos compartir información no personal (como el número de visitantes diarios de una página web en particular con terceros, como por ejemplo: socios de publicidad. Esta información no directamente lo identifica personalmente a usted o a cualquier usuario.
+<br>
+(1.1.1.1.1) Nosotros podremos revelar públicamente el nombre, ciudad y estado de los ganadores de concursos y sorteos.
+<br>
+3. Seguridad de los Datos
+<br>
+El sitio incorpora procedimientos físicos, electrónicos y administrativos para salvaguardar la confidencialidad de su información personal, incluyendo Secure Sockets Layer (SSL) para todas las transacciones financieras a través del Sitio. Empleamos el método de cifrado SSL para proteger su información personal en línea, y también tomamos varias medidas para proteger su información personal en nuestras instalaciones. El acceso a su información personal está restringido. Sólo los empleados que necesitan acceder a su información personal para realizar una tarea específica tienen acceso a su información personal. Por último, contamos con terceros proveedores de servicios para la seguridad física de algunos de nuestros equipos informáticos. Creemos que sus procedimientos de seguridad son adecuadas.
+<br>
+Por ejemplo, cuando usted visita el sitio, accede a servidores que se mantienen en un entorno físico seguro, detrás de una jaula cerrada y un servidor de seguridad electrónica.
+<br>
+A pesar de que empleamos las precauciones estándar de la industria para proteger su información personal, no podemos garantizar una seguridad total. La seguridad completa al 100% no existe en la actualidad en ningún lugar ya sea en línea o sin conexión.
+<br>
+4. Correcciones
+<br>
+A solicitud suya, nosotros podremos, (a) corregir o actualizar su información personal, (b) dejar de enviar correos electrónicos a su dirección de correo electrónico SMS a su celular, y / o (c) desactivar su cuenta para impedir la realización de futuras compras a través de esa cuenta. Usted puede hacer estas peticiones en a través del siguiente correo: sms@oxium.mx por favor, no enviar su número de tarjeta de crédito u otra información confidencial.
+<br>
+Todos sus datos personales son tratados de acuerdo a la legislación aplicable y vigente en el país, por ello le informamos que usted tiene en todo momento los derechos (ARCO) de acceder, rectificar, cancelar u oponerse al tratamiento que le damos a sus datos personales; derecho que podrá hacer valer a través del Área de Privacidad encargada de la seguridad de datos personales en el Teléfono 01 222 6443300 o por medio de su correo electrónico: sms@oxium.mx
+<br>
+A través de estos canales usted podrá actualizar sus datos y especificar el medio por el cual desea recibir información, ya que en caso de no contar con esta especificación de su parte, OXIUM MEXICO S. de R. L. de C.V., establecerá libremente el canal que considere pertinente para enviarle información.
+<br>
+5. Actualización de esta Política
+</p>
+<p>
+Si nosotros cambiamos o actualizamos esta Política de Privacidad, publicaremos los cambios y actualizaciones en el sitio para que usted siempre este al tanto de la información que recopilamos, utilizamos y divulgamos. Le recomendamos que revise esta Política de Privacidad de vez en cuando para saber si la política de privacidad ha sido modificada o actualizada. Si usted tiene alguna pregunta acerca de la Política de Privacidad, por favor contáctese con nosotros en: sms@oxium.mx
+</p>
+			    </div>
+			    <div class="modal-footer">
+			      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
+			    </div>
+			  </div>
+			</div>
 		</footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script src="js/materialize.js"></script>
