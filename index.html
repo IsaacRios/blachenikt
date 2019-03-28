@@ -12,22 +12,51 @@
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 		<link rel="stylesheet" href=" css/fonts.css">
 		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/stylemedia.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+     			$('.sidenav').sidenav();
+			});
+		</script>
 		<script>
 			$(document).ready(function(){
 			 	$('.carousel.carousel-slider').carousel({
 				    fullWidth: true,
-				    indicators: false,
+				    indicators: true,
 				  });
-    			$('.sidenav').sidenav();
-    			$('.modal').modal();
     		 });
 		</script>
     	<script>
 				 $(document).ready(function(){
+				 	$('.modal').modal();
 				    $('#modal1').modal();
 				    $('#modal1').modal('open'); 
 				 });
+		</script>
+		<script>
+			// start carrousel
+		   $('.carousel.carousel-slider').carousel({
+		      fullWidth: true,
+		      indicators: false
+   });
+		</script>
+		<script>
+			   // move next carousel
+			   $('.moveNextCarousel').click(function(e){
+			      e.preventDefault();
+			      e.stopPropagation();
+			      $('.carousel').carousel('next');
+			   });
+
+		</script>
+		<script>		
+ 	  // move prev carousel
+	   $('#movePrevCarousel').click(function(e){
+	      e.preventDefault();
+	      e.stopPropagation();
+	      $('.carousel').carousel('prev');
+	   });
 		</script>
 	</head>
 	<body>
@@ -53,29 +82,23 @@
 			    <li><a href="#contacto">CONTACTO</a></li>
 			  </ul>
 		</header>
-<!--- Popup -->
-		<div>
+
 			  <!-- Modal Structure -->
-			  <div id="modal1" class="modal modal-fixed-footer">
+			  <div id="modal1" class="modal modal-fixed-footer modalI">
 			    <div class="modal-content">
-			      <div class="row">
-						<div class="formFinal col s6 m5 l5">
+						<div class="formFinal">
 							<input placeholder="     Nombre*" id="fullname" type="text" class="validate" style="border: 0;">
 							<label for="fullname"></label>
 						</div>
-						<div class="col m1 l2">
-							
-						</div>
-						<div class="formFinal col s6 m5 l5">
+						<div class="formFinal">
 							<input placeholder="     Teléfono*" id="telephone"type="tel" class="validate" style="border: 0;">
           					<label for="telephone"></label>
 						</div>
-					</div>
 					<div class="formFinal ">
 						<input placeholder="     Correo" id="email" type="email" class="validate" style="border: 0;">
           				<label for="email"></label>
 					</div>
-					<div class="formFinal " style="height: 80px">
+					<div class="formFinal " style="height: 60px">
 						<textarea placeholder="     Mensaje" id="mensaje" class="materialize-textarea" data-length="120" style="border: 0; "></textarea>
 		            	<label for="mensaje"></label>
 					</div>
@@ -85,9 +108,12 @@
 			      <a href="#!" class="modal-close waves-effect btn-flat">Cerrar</a>
 			    </div>
 			  </div>
-		</div>
-		<section>
-			<div class="carousel carousel-slider">
+
+
+		<!-- Principal Carousel-->
+
+		<section> 
+			<div class="carousel carousel-slider" id="myCarousel">
 				<div class="arrows1">
 					<i class="material-icons arrowl">arrow_back</i>
 					<i class="material-icons arrowr">arrow_forward</i>
@@ -95,27 +121,43 @@
 				<div class="carousel-item" href="#one!">
 					<div class="carouselOne">
 						<h3 class="subtitleBlack">Balché Nikté</h3>
-						<p style="color: #6b6968">Cosméticos de origen natural con altos estándares de calidad.</p>
+						<p style="color: #6b6968">
+							<span class="textMini">
+								Cosméticos de origen natural con altos estándares de calidad.
+							</span>
+						</p>
 						<br>
 						<a href="#beneficios" class="waves-effect btngreen btn">Conoce los beneficios</a>
 					</div>
-				<img src="images/Banners/Banners_01.png">
+					<img src="images/Banners/Banners_01.png">
 				</div>
 				<div class="carousel-item" href="#two!">
-					<div class="carouselOne1">
+					<div class="carouselOne">
 						<h3 class="subtitleBlack">Emulgel Refrescante</h3>
-						<p><span class="carouselTexts">Con componentes naturales</span></p>
-						<p style="color: #6b6968">Disminuye los dolores musculares, torceduras, lesiones deportivas y pies cansados. </p>
+						<p>
+							<span class="carouselTexts">Con componentes naturales</span>
+						</p>
+						<p style="color: #6b6968">
+							<span class="textMini">
+							Disminuye los dolores musculares, torceduras, lesiones deportivas y pies cansados.
+							</span> 
+						</p>
 						<br>
 						<a href="#contacto" class="waves-effect btnorange btn">Ordena</a>
 					</div>
 					<img src="images/Banners/Banners-02.png">
 				</div>
 				<div class="carousel-item" href="#three!">
-					<div class="carouselOne1">
+					<div class="carouselOne">
 						<h3 class="subtitleBlack">Balché Nikté</h3>
-						<p><span class="carouselTexts">Respetamos el medio ambiente</span></p>
-						<p style="color: #6b6968">Procesos productivos empleando materiales de alta calidad, respetuosos con el entorno natural y social.</p>
+						<p>
+							<span class="carouselTexts">Respetamos el medio ambiente</span>
+						</p>
+						<p style="color: #6b6968">
+							<span class="textMini">
+								Procesos productivos empleando materiales de alta calidad, respetuosos con el entorno natural y social.
+							</span>
+						</p>
 						<br>
 						<a href="#contacto" class="waves-effect btngreen btn">Contáctanos</a>
 					</div>
@@ -131,22 +173,26 @@
 				</div>
   			</div>
 		</section>
+
+		<!-- Beneficios -->
+
 		<section id="beneficios">
 			<h2 class="titlebeneficios">Emulgel Refrescante</h2>
 			<div class="row">
-				<div class="col s1 m1" style="margin-right: 5%;">
-					<p class="subtitle-verticalp">
+				<div class="col m1" style="margin-right: 5%;">
+					<p class="subtitle-verticalp1 destroy">
 					B E N E F I C I O S  |  P R O P I E D A D E S</p>		
 				</div>
-				<div class="col s10 m3">
+				<div class="col s12 m3">
 					<div class="card card-hover">
 						<div class="card-image cardImage1">
 					       <img src="images/Iconos/Iconos-04.png" alt="iconGreen">
 					    </div>
 				        <div class="card-content ">
 				        	<h4 class="card-title"><span class="font-bold">Componentes naturales</span></h4>
-				            <p class="font-card">Emulgel a base de componentes naturales que disminuyen el dolor para un alivio sostenido.
-				            <p>
+				            <p class="font-card">
+				            	Emulgel a base de componentes naturales que disminuyen el dolor para un alivio sostenido.
+				            </p>
 					    </div>
 					 </div>
 				</div>
@@ -172,150 +218,180 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> <!-- Row -->
 		</section>
+
+<!-- Componentes -->		
+
 		<section id="componentes">
 			<div class="row">
 				<div class="col s1 m1">
 					<p class="subtitle-verticalp">C O M P O N E N T E S &nbsp;  N A T U R A L E S</p>					
 				</div>
 				<div class="col s11 m11">
-				  <div class="carousel carousel-slider ">
-				  	<div class="arrows1">
-						<i class="material-icons arrowl">arrow_back</i>
-						<i class="material-icons arrowr">arrow_forward</i>
-					</div>
-				    <div class="carousel-item" href="#one!">
-					 <div class="row">
-					 	<div class="col s6 m6" style="padding-left: 5%">
-					 		<div style="text-align: left">
-					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">Cúrcuma</span></h4>
-					 			<p>(Cúrcuma Longa):	</p>
-					 		</div>					 		
-					 		<div>
-					 			<p><span class="text-carousel4">Su contenido de curcuminoides, especialmente la curcumina; le confieren propiedades antiinflamatorias, antioxidantes, antimicrobianas y cicatrizantes. 
-					 			</span></p>
-					 		</div>
-					      <div style="text-align: left; margin-top: 50px;">
-					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
-					      </div>
-					 	</div>
-					 	<div class="col s6 m6">
-					 		<img class="img-carousel-aceites" src="images/Aceites/1curcuma.png" alt="curcuma image">
-					 	</div>
-					 	<!-- <i class="material-icons flechas">arrow_forward</i>-->
-					 </div>
-					</div>
-					 <div class="carousel-item" href="#two!">
-					   <div class="row">
-					 	<div class="col s6 m6" style="padding-left: 5%">
-					 		<div style="text-align: left">
-					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">sésamo</span></h4>
-					 			<p>(Sesamum indicum):</p>
-					 		</div>					 		
-					 		<div>
-					 			<p><span class="text-carousel4">además de hidratante; regenera, reestructura y suaviza la piel.
-					 			</span></p>
-					 		</div>
-					      <div style="text-align: left; margin-top: 50px;">
-					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
-					      </div>
-					 	</div>
-					 	<div class="col s6 m6">
-					 		<img class="img-carousel-aceites" src="images/Aceites/2sesamo.png" alt="sesamo image">
-					 	</div>
-					 </div>
-				    </div>
-				    <div class="carousel-item " href="#three!">
-					  <div class="row">
-					 	<div class="col m6" style="padding-left: 5%">
-					 		<div style="text-align: left">
-					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">rosa mosqueta</span></h4>
-					 			<p>(Rosa rubiginosa):</p>
-					 		</div>					 		
-					 		<div>
-					 			<p><span class="text-carousel4">función regeneradora y cicatrizante.
-					 			</span></p>
-					 		</div>
-					      <div style="text-align: left; margin-top: 50px;">
-					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
-					      </div>
-					 	</div>
-					 	<div class="col s6 m6">
-					 		<img class="img-carousel-aceites" src="images/Aceites/2Rosamosqueta.png" alt="rosa image">
-					 	</div>
-					 </div>
-				    </div>
-				    <div class="carousel-item " href="#four!">
- 					  <div class="row">
-					 	<div class="col s6 m6" style="padding-left: 5%">
-					 		<div style="text-align: left">
-					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">albaricoque</span></h4>
-					 			<p>(Prunus armeniaca):</p>
-					 		</div>					 		
-					 		<div>
-					 			<p><span class="text-carousel4">
-					 				aceite ligero rico en Vitamina A y E, rico en ácidos grasos poliinsaturados y en minerales; con propiedades calmantes, regeneradoras de tejido y tonificantes.
-					 			</span></p>
-					 		</div>
-					      <div style="text-align: left; margin-top: 50px;">
-					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
-					      </div>
-					 	</div>
-					 	<div class="col s6 m6">
-					 		<img class="img-carousel-aceites" src="images/Aceites/4Albaricoque.png" alt="albaricoque">
-					 	</div>
-					 	<!-- <i class="material-icons flechas">arrow_forward</i>-->
-					 </div>
-				    </div>
-				    <div class="carousel-item " href="#five!">
-					   <div class="row">
-					 	<div class="col m6" style="padding-left: 5%">
-					 		<div style="text-align: left">
-					 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">eucalipto</span></h4>
-					 			<p>(Eucalyptus globulus):</p>
-					 		</div>					 		
-					 		<div>
-					 			<p><span class="text-carousel4">
-					 				sus principales componentes; cineol, flavonoides y taninos tiene propiedades antiinflamatorias, antisépticas y cicatrizantes.
-					 			</span></p>
-					 		</div>
-					      <div style="text-align: left; margin-top: 50px;">
-					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
-					      </div>
-					 	</div>
-					 	<div class="col s6 m6">
-					 		<img class="img-carousel-aceites" src="images/Aceites/5Eucalipto.png" alt="eucalipto">
-					 	</div>
-					 </div>
-				    </div>
-				    <div class="carousel-item " href="#six!">
-					   <div class="row">
-					 	<div class="col s6 m6" style="padding-left: 5%">
-					 		<div style="text-align: left">
-					 			<h4 class="SubtitleGreen3">Aceite de Winter Green</h4>
-					 			<p>(Gaultheria procumbens):</p>
-					 		</div>					 		
-					 		<div>
-					 			<p><span class="text-carousel4">
-					 				estimula la circulación sanguínea alrededor de los tejidos afectados.
-					 			</span></p>
-					 		</div>
-					      <div style="text-align: left; margin-top: 50px;">
-					      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
-					      </div>
-					 	</div>
-					 	<div class="col s6 m6">
-					 		<img class="img-carousel-aceites" src="images/Aceites/6WinterGreen.png" alt="wintergreen">
-					 	</div>
-					 </div> <!--Row  -->
-				    </div> <!--item 6  -->
-				    </div> <!--  Carousel slider-->
-				    <div class="componentesBG">
-				    </div> <!-- Fondo plantas -->
-				    </div> <!-- col  -->
-				  </div> <!-- Row -->
+					<div class="carousel carousel-slider">
+					  	<div class="arrows1">
+							<i class="material-icons arrowl">arrow_back</i>
+							<i class="material-icons arrowr">arrow_forward</i>
+						</div>
+					    <div class="carousel-item" href="#one!">
+					    	<div class="carousel_container2">
+						 		<div class="row">
+						 			<div class="col s6 m6" style="padding-left: 5%">
+								 		<div style="text-align: left">
+								 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">Cúrcuma</span></h4>
+								 			<p>(Cúrcuma Longa):	</p>
+								 		</div>					 		
+								 		<div>
+								 			<p><span class="text-carousel4 textMini">Su contenido de curcuminoides, especialmente la curcumina; le confieren propiedades antiinflamatorias, antioxidantes, antimicrobianas y cicatrizantes. 
+								 			</span></p>
+								 		</div>
+									    <div style="text-align: left; margin-top: 50px;">
+									    	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+									    </div>
+						 			</div>
+								 	<div class="col s6 m6">
+								 		<img class="img-carousel-aceites" src="images/Aceites/1curcuma.png" alt="curcuma image">
+								 	</div>
+						 		</div> <!-- Fin Row -->
+							</div>
+						</div>
+						<div class="carousel-item" href="#two!">
+						 	<div class="carousel_container2">
+						 		<div class="row">
+								 	<div class="col s6 m6" style="padding-left: 5%">
+								 		<div style="text-align: left">
+								 			<h4 class="SubtitleGreen3">Aceite de <span class="SubtitleGreenLine">sésamo</span></h4>
+								 			<p>(Sesamum indicum):</p>
+								 		</div>					 		
+								 		<div>
+								 			<p>
+								 				<span class="text-carousel4">
+								 					además de hidratante; regenera, reestructura y suaviza la piel.
+								 				</span>
+								 			</p>
+								 		</div>
+								      	<div style="text-align: left; margin-top: 50px;">
+								      		<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+								      	</div>
+								 	</div>
+								 	<div class="col s6 m6">
+								 		<img class="img-carousel-aceites" src="images/Aceites/2sesamo.png" alt="sesamo image">
+								 	</div>
+						 		</div>
+						 	</div>
+					    </div>
+					    <div class="carousel-item" href="#three!">
+					    	<div class="carousel_container2">
+						    	<div class="row">
+								 	<div class="col m6" style="padding-left: 5%">
+								 		<div style="text-align: left">
+								 			<h4 class="SubtitleGreen3">
+								 				Aceite de <span class="SubtitleGreenLine">rosa mosqueta</span>
+								 			</h4>
+								 			<p>(Rosa rubiginosa):</p>
+								 		</div>					 		
+								 		<div>
+								 			<p>
+								 				<span class="text-carousel4">función regeneradora y cicatrizante.</span>
+								 			</p>
+								 		</div>
+									    <div style="text-align: left; margin-top: 50px;">
+									    	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+									    </div>
+								 	</div>
+								 	<div class="col s6 m6">
+								 		<img class="img-carousel-aceites" src="images/Aceites/2Rosamosqueta.png" alt="rosa image">
+								 	</div>
+						 		</div>
+							</div>
+					    </div>
+					    <div class="carousel-item" href="#four!">
+					    	<div class="carousel_container2">
+	 					  		<div class="row">
+								 	<div class="col s6 m6" style="padding-left: 5%">
+								 		<div style="text-align: left">
+								 			<h4 class="SubtitleGreen3">
+								 				Aceite de <span class="SubtitleGreenLine">albaricoque</span>
+								 			</h4>
+								 			<p>(Prunus armeniaca):</p>
+								 		</div>					 		
+								 		<div>
+								 			<p><span class="text-carousel4 textMini">
+								 				aceite ligero rico en Vitamina A y E, rico en ácidos grasos poliinsaturados y en minerales; con propiedades calmantes, regeneradoras de tejido y tonificantes.
+								 				</span>
+								 			</p>
+								 		</div>
+								      	<div style="text-align: left; margin-top: 50px;">
+								      		<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+								      	</div>
+								 	</div>
+								 	<div class="col s6 m6">
+								 		<img class="img-carousel-aceites" src="images/Aceites/4Albaricoque.png" alt="albaricoque">
+								 	</div>
+						 		</div>
+					    	</div>
+						</div>
+					    <div class="carousel-item " href="#five!">
+					    	<div class="carousel_container2">
+						   		<div class="row">
+								 	<div class="col m6" style="padding-left: 5%">
+								 		<div style="text-align: left">
+								 			<h4 class="SubtitleGreen3">
+								 				Aceite de <span class="SubtitleGreenLine">eucalipto</span>
+								 			</h4>
+								 			<p>(Eucalyptus globulus):</p>
+								 		</div>					 		
+								 		<div>
+								 			<p>
+								 				<span class="text-carousel4 textMini">
+								 				sus principales componentes; cineol, flavonoides y taninos tiene propiedades antiinflamatorias, antisépticas y cicatrizantes.
+								 				</span>
+								 			</p>
+								 		</div>
+								      	<div style="text-align: left; margin-top: 50px;">
+								      		<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+								      	</div>
+								 	</div>
+								 	<div class="col s6 m6">
+								 		<img class="img-carousel-aceites" src="images/Aceites/5Eucalipto.png" alt="eucalipto">
+								 	</div>
+								</div>
+							</div>
+					    </div>
+					    <div class="carousel-item " href="#six!">
+					    	<div class="carousel_container2">
+						   		<div class="row">
+								 	<div class="col s6 m6" style="padding-left: 5%">
+								 		<div style="text-align: left">
+								 			<h4 class="SubtitleGreen3">Aceite de Winter Green</h4>
+								 			<p>(Gaultheria procumbens):</p>
+								 		</div>					 		
+								 		<div>
+								 			<p>
+								 				<span class="text-carousel4 textMini">
+								 				estimula la circulación sanguínea alrededor de los tejidos afectados.
+								 				</span>
+								 			</p>
+								 		</div>
+								      <div style="text-align: left; margin-top: 50px;">
+								      	<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
+								      </div>
+								 	</div>
+								 	<div class="col s6 m6">
+								 		<img class="img-carousel-aceites" src="images/Aceites/6WinterGreen.png" alt="wintergreen">
+								 	</div>
+						 		</div> <!-- Row  -->
+							</div> <!--carousel container 2-->
+					    </div> <!--item six  -->
+				    </div>  <!-- FinCarousel slider-->
+					<div class="componentesBG"></div>  <!--Fondo plantas -->
+				</div> <!-- col 1 11  -->
+			</div>  <!--Row -->
 		</section>
+		
+		<!-- emulgel refrescante colors -->
+
 		<div class="emulgel">
 			<p>Emulgel Refrescante <br> $120.00</p>
 			<a href="#contacto" class="waves-effect btnorange btn">Compra ahora</a>
@@ -324,43 +400,46 @@
 			<p>Adquiere 5 emulgel refrescante y el sexto es GRATIS.</p>
 			<a href="#contacto" class="waves-effect btngreen btn">Ordena ahora</a>
 		</div>
+	
+	<!-- Nosotros -->
+
 		<section id="nosotros">
 			<div class="row" >
 				<p class="SubtitleGreen" style="padding-left: 5%;">Centro de Distribución en</p>
-				<div class="col s1 m1 colUp" style="margin-right: 5%;">
-					<p class="subtitle-verticalp" >C E N T R O S  &nbsp; D E &nbsp; D I S T R I B U C I Ó N</p>		
+				<div class="col s12 m1 colUp" style="margin-right: 5%;">
+					<p class="subtitle-verticalp1" >C E N T R O S  &nbsp; D E &nbsp; D I S T R I B U C I Ó N</p>		
 				</div>
-				<div class="col s6 m4 l3" >
+				<div class="col s12 m4 l3" >
 					<div class="container-city">
 						<p><span class="font-bold">Quéretaro</span></p>
 					</div>
 				</div>
-				<div class="col s6 m4 l3">
+				<div class="col s12 m4 l3">
 					<div class="container-city">
 						<p><span class="font-bold">Cuernavaca</span></p>
 					</div>
 				</div>
-				<div class="col s6 m4 l3">
+				<div class="col s12 m4 l3">
 					<div class="container-city">
 						<p><span class="font-bold">Guadalajara</span></p>
 					</div>
 				</div>
-			<!-- </div> -->
+
 			<div class="row">
 				<div class="col s1 m1">
 					
 				</div>
-				<div class="col s10 m4 l3">
+				<div class="col s12 m4 l3">
 					<div class="container-city">
 						<p><span class="font-bold">Durango</span></p>
 					</div>
 				</div>
-				<div class="col s10 m6 l3">
+				<div class="col s12 m6 l3">
 					<div class="container-city">
 						<p><span class="font-bold">Tabasco</span></p>
 					</div>
 				</div>
-				<div class="col s10 m6 l3">
+				<div class="col s12 m6 l3">
 					<div class="container-city">
 						<p><span class="font-bold">CDMX</span></p>
 					</div>
@@ -373,94 +452,107 @@
 				<div class="col m6 s11" style="padding-left: 50px; padding-right: 120px;">
 					<div class="row">
 						<h5 class="SubtitleGreen2 ">Misión.</h5>
-						<p class="mision lineAbajo">Ser una empresa mexicana dedicada al desarrollo, producción y comercialización de productos cosméticos de origen natural, para el cuidado e higiene personal, que sean altamente competitivos en calidad, eficacia, precio y seguridad, manteniendo con ello los altos estándares en los procesos de elaboración.</p>
-						<div class="col m6">
+						<p class="flow-text mision lineAbajo"><span class="justify">Ser una empresa mexicana dedicada al desarrollo, producción y comercialización de productos cosméticos de origen natural, para el cuidado e higiene personal, que sean altamente competitivos en calidad, eficacia, precio y seguridad, manteniendo con ello los altos estándares en los procesos de elaboración.</span></p>
+						<div class="col m6 ">
 							<h5 class="SubtitleGreen2">Visión.</h5>
-							<p class="mision">Ser referencia y líder en el mercado nacional y regional de fabricantes de productos cosméticos de origen natural, así como la primera elección de un producto natural para nuestros clientes, con la tendencia de lograr un crecimiento constante en mercados internacionales.</p>
+							<p class="mision"><span class="justify">Ser referencia y líder en el mercado nacional y regional de fabricantes de productos cosméticos de origen natural, así como la primera elección de un producto natural para nuestros clientes, con la tendencia de lograr un crecimiento constante en mercados internacionales.</span></p>
 							<a href="#contacto" class="waves-effect btngreen2 btn">Contáctanos</a>
 						</div>
 						<div class="col m6 s12 lineaLado">
 							<h5 class="SubtitleGreen2">Valores.</h5>
 							<ul>
-								<li class="listorange"><p class="li-text">Respeto por el medio ambiente: productos, materiales y procedimientos respetuosos con nuestro entorno.</p></li>
-								<li class="listorange"><p class="li-text">Sencillez y eficacia: productos accesibles de calidad y buen precio, que satisfagan las necesidades de nuestros clientes.</p></li>
-								<li class="listorange"><p class="li-text">Pasión e innovación: trabajo en equipo, mejora continua.</p></li>
-								<li class="listorange"><p class="li-text">Responsabilidad: compromiso con nuestros colaboradores y clientes, confianza y sentido de identidad.</p></li>
+								<li class="listorange"><p class="li-text"><span class="justify">
+									Respeto por el medio 
+									ambiente: productos, materiales 
+									y procedimientos respetuosos
+									con nuestro entorno.
+								</span></p></li>
+								<li class="listorange"><p class="li-text"><span class="justify">Sencillez y eficacia: productos accesibles de calidad y buen precio, que satisfagan las necesidades de nuestros clientes.</span></p></li>
+								<li class="listorange"><p class="li-text"><span class="justify">Pasión e innovación: trabajo en equipo, mejora continua.</span></p></li>
+								<li class="listorange"><p class="li-text"><span class="justify">Responsabilidad: compromiso con nuestros colaboradores y clientes, confianza y sentido de identidad.</span></p></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-		<div id="testimonios">
-			<div class="row">
-				<div class="col s1 m1">
-					<p class="subtitle-verticalp">T E S T I M O N I O S</p>					
-				</div>
-				<div class="col s11 m10">
-					  <div class="carousel carousel-slider center shadow">
-					  		<div class="arrows1">
-								<i class="material-icons  arrowl">arrow_back</i>
-								<i class="material-icons  arrowr">arrow_forward</i>
-							</div>
-							<div class="carousel-fixed-item" >
-								<img class="comillotas1" src="images/Comillas-01.png" alt="comillas1" >
-							</div>
-							<div class="carousel-fixed-item" >
-								<img class="comillotas2" src="images/Comillas-02.png" alt="comillas2" >
-							</div>
-					    <div class="carousel-item" href="#one!">
-					      <div class="carousel_container">
-					      	<div class="text-container-carousel3">
-					      		<h4 class="SubtitleGreen3">José Luis</h4>
-					      		<p>
-					      		<span  class="text-carousel3">Lo use para un dolor en la espalda, antes de dormir y la sensación es agradable... dormí sin problema.</span>
-					      		</p>
-					      	</div>		      		
-					      </div>
-					    </div>
-					    <div class="carousel-item" href="#two!">
-					    	<div class="carousel_container">
-					      	<div class="text-container-carousel3">
-					      		<h4 class="SubtitleGreen3">Ángel Sánchez </h4>
-							      <p>
-					      		<span  class="text-carousel3">Lo utilice después de una caminata larga en las piernas y descanse riquísimo...</span>
-					      		</p>
-					      	</div>
-							</div>
-					    </div>
-					    <div class="carousel-item" href="#three!">
-					    	<div class="carousel_container">
-						      	<div class="text-container-carousel3">
-						      		<h4 class="SubtitleGreen3">Gustavo Pérez</h4>
+
+		<!-- Testimonios -->
+			
+			<div id="testimonios">
+				<div class="row">
+					<div class="col s1 m1" style="margin-right: 5px;">
+						<p class="subtitle-verticalp">T E S T I M O N I O S</p>					
+					</div>
+					<div class="col s10 m10">
+						  	<div class="carousel carousel-slider center shadow">
+						  		<div class="arrows1">
+									<i class="material-icons  arrowl">arrow_back</i>
+									<i class="material-icons  arrowr">arrow_forward</i>
+								</div>
+								<div class="carousel-fixed-item" >
+									<img class="comillotas1" src="images/Comillas-01.png" alt="comillas1" >
+								</div>
+								<div class="carousel-fixed-item">
+									<img class="comillotas2" src="images/Comillas-02.png" alt="comillas2" >
+								</div>
+						    <div class="carousel-item" href="#one!">
+						      <div class="carousel_container">
+						      	<div class="text-container-carousel3" >
+						      		<h4 class="SubtitleGreen3">José Luis</h4>
 						      		<p>
-						      		<span  class="text-carousel3">Después de una jornada ardua en el gimnasio lo aplique en mis brazos y eliminó el dolor.</span>
+						      		<span  class="text-carousel3">Lo usé para un dolor en la espalda, antes de dormir y la sensación es agradable... dormí sin problema.</span>
 						      		</p>
 						      	</div>		      		
-					      </div>
-					    </div>
-					    <div class="carousel-item " href="#four!">
-							<div class="carousel_container">
+						      </div>
+						    </div>
+						    <div class="carousel-item" href="#two!">
+						    	<div class="carousel_container">
 						      	<div class="text-container-carousel3">
-						      		<h4 class="SubtitleGreen3">Rosalba Ramírez</h4>
-						      		<p>
-						      		<span  class="text-carousel3">Después de un accidente en coche mi hija me dio un masaje con el producto en la espalda y me quitó el dolor.</span>
+						      		<h4 class="SubtitleGreen3">Ángel Sánchez </h4>
+								      <p>
+						      		<span  class="text-carousel3">Lo utilicé después de una caminata larga en las piernas y descanse riquísimo...</span>
 						      		</p>
-						      	</div>		      		
-					      </div>
-					    </div>
-					  </div>
-					  <div class="testimoniosBG"></div>	
+						      	</div>
+								</div>
+						    </div>
+						    <div class="carousel-item" href="#three!">
+						    	<div class="carousel_container">
+							      	<div class="text-container-carousel3">
+							      		<h4 class="SubtitleGreen3">Gustavo Pérez</h4>
+							      		<p>
+							      		<span  class="text-carousel3">Después de una jornada ardua en el gimnasio lo aplique en mis brazos y eliminó el dolor.</span>
+							      		</p>
+							      		</div>		      		
+						      		</div>
+						    	</div>
+							    <div class="carousel-item " href="#four!">
+									<div class="carousel_container">
+								      	<div class="text-container-carousel3">
+								      		<h4 class="SubtitleGreen3">Rosalba Ramírez</h4>
+								      		<p>
+								      			<span  class="text-carousel3">Después de un accidente en coche mi hija me dio un masaje con el producto en la espalda y me quitó el dolor.</span>
+								      		</p>
+								      	</div>		      		
+						      		</div>
+						    	</div>
+							</div>
+							<div class="testimoniosBG"></div>	
+					</div> <!-- fin col s11 m10 -->
 				</div>
-			</div>
-		</div> <!-- ID testimonios-->
+			</div>  
 		</section>
+
+		<!-- Map -->
 		<div>
 			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.0604154481894!2d-99.09874708561756!3d19.452961845071194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1fbe158085d7d%3A0xcff14fcaa5538d50!2sCalle+Cairo+321%2C+Fernando+Casas+Alem%C3%A1n%2C+07960+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses!2smx!4v1552033094379" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
+
+		<!-- Cards contact -->
+
 		<div class="row cardscenter">
-			<div class="col s6 m6 l3">
+			<div class="col s11 m6 l3">
 				<div class="card cardfooter">
-			        <div class="card-image cardsquare">
+			        <div class="card-image cardsquare" >
 			          <img src="images/Iconos/Iconos-07.png">
 			        </div>
 			        <div class="card-action" style="text-align: center; border-top: white solid 2px;">
@@ -468,7 +560,7 @@
 			        </div>
 		      </div>
 			</div>
-			<div class="col s6 m6 l3">
+			<div class="col s11 m6 l3">
 				<div class="card cardfooter">
 			        <div class="card-image cardsquare">
 			          <img src="images/Iconos/Iconos-08.png">
@@ -478,7 +570,7 @@
 			        </div>
 		      	</div>
 			</div>
-			<div class="col s6 m6 l3">
+			<div class="col s11 m6 l3">
 				<div class="card cardfooter">
 			        <div class="card-image cardsquare">
 			          <img src="images/Iconos/Iconos-09.png">
@@ -488,7 +580,7 @@
 			        </div>
 		      	</div>
 			</div>
-			<div class="col s6 m6 l3">
+			<div class="col s11 m6 l3">
 				<div class="card cardfooter">
 			        <div class="card-image cardsquare">
 			          <img src="images/Iconos/Iconos-10.png">
@@ -498,8 +590,11 @@
 			        </div>
 		      	</div>
 			</div>
-		</div>
+		</div> <!-- Fin Row -->
+
+
 		<footer>
+			
 			<section id="contacto">
 				<div class="formcontact">
 					<h2 class="SubtitleGreen2">Balché Nikté</h2>
@@ -522,16 +617,17 @@
           				<label for="email"></label>
 					</div>
 					<div class="formFinal" style="height: 200px;">
-						<textarea placeholder="     Mensaje" id="mensaje" class="materialize-textarea" data-length="120" style="border: 0; "></textarea>
+				<textarea placeholder="&nbsp; Mensaje" id="mensaje" class="materialize-textarea" data-length="150" style="border: 0;">
+				</textarea>
 		            	<label for="mensaje"></label>
 					</div>
 					<br>
 						<a href="#contacto" class="btn btnSend">Enviar</a>
-
 				</div>
-				<div class="contactoBG"></div>
-			</section>
-			<div>
+			 	<div class="contactoBG"></div>
+			</section> 
+
+
 			<div class="footerOrange center">
 					<a class=" modal-trigger" href="#modal2" style="color: white">Aviso de privacidad</a>
 			</div>
@@ -540,8 +636,7 @@
 			  <div id="modal2" class="modal">
 			    <div class="modal-content">
 
-			      <h4>AVISO DE PRIVACIDAD</h4>
-
+<h4>AVISO DE PRIVACIDAD</h4>
 <h5>TÉRMINOS Y CONDICIONES</h5>
 <p>
 Gracias por acceder al sitio propiedad de OXIUM MEXICO S. de R. L. de C.V. en donde nos preocupamos por respetar los derechos de privacidad de nuestros clientes y visitantes y en donde nos tomamos muy en serio el derecho de las personas para decidir el uso que se debe de dar a sus datos personales y a su derecho a la privacidad.
@@ -677,12 +772,11 @@ A través de estos canales usted podrá actualizar sus datos y especificar el me
 <p>
 Si nosotros cambiamos o actualizamos esta Política de Privacidad, publicaremos los cambios y actualizaciones en el sitio para que usted siempre este al tanto de la información que recopilamos, utilizamos y divulgamos. Le recomendamos que revise esta Política de Privacidad de vez en cuando para saber si la política de privacidad ha sido modificada o actualizada. Si usted tiene alguna pregunta acerca de la Política de Privacidad, por favor contáctese con nosotros en: sms@oxium.mx
 </p>
-			    </div>
+			    	</div>
 			    <div class="modal-footer">
 			      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cerrar</a>
 			    </div>
 			  </div>
-			</div>
 		</footer>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 		<script src="js/materialize.js"></script>

@@ -107,8 +107,8 @@ nav{
 .cardfooter{
 	margin-top: -50px;
 	padding-top: 30px;
-	width: 256px;
-	height: 256px;
+	width: 250px;
+	height: 250px;
 }
 .cardTextBlack{
 	color: #595959;
@@ -134,87 +134,8 @@ nav{
 	object-position: 5px 10%;
 	width: 500px;
 	height: 150px;
-	position:absolute; top:200px; left:750px; 
+	position:absolute; top:200px; left:750px;
 }
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-    .carouselOne{
-	background-color: #D4D3CE; 
-	object-position: 5px 10%;
-	width: 500px;
-	height: 150px;
-	position:absolute; top:200px; left:600px; 
-	}
-  
-}
-
-
-@media (min-width: 481px) and (max-width: 767px) {
-   
-   .carouselOne{
-	background-color: #D4D3CE; 
-	object-position: 5px 10%;
-	width: 500px;
-	height: 150px;
-	position:absolute; top:110px; left:350px; 
-	}
-	.subtitleBlack{
-	font-weight: bold;
-	font-size: 1.5em;
-	color: #6b6968;
-	}
-	.carouselTexts{
-	color: #6b6968;
-	font-weight: bold;
-	font-size: .5em;
-	}
-
-	.img-carousel-aceites{
-	height: 150px;
-	position: relative;
-	z-index: 3;
-}
-  
-}
-@media (min-width: 320px) and (max-width: 480px) {
-  
-	.carouselOne{
-	background-color: #D4D3CE; 
-	object-position: 5px 10%;
-	width: 500px;
-	height: 150px;
-	position:absolute; top:25px; left:175px; 
-	}
-
-	.carouselTexts{
-	color: #6b6968;
-	font-weight: bold;
-	font-size: .9em;
-	}
-
-	.img-carousel-aceites{
-	height: 150px;
-	position: relative;
-	z-index: 3;
-}
-
-	.misionvisionBG{
-	width: 100%;
-	height: auto;
-	opacity: 0.5;
-	position: relative;
-	z-index: -3;
-
-	}
-	.subtitleBlack{
-		font-weight: bold;
-		font-size: 1em;
-		color: #6b6968;
-	}
-
-}
-
 
 .carouselTexts{
 color: #6b6968;
@@ -234,7 +155,11 @@ font-size: 1.2em;
 	padding-left: 10%;
 	padding-right: 15%;
 	text-align: left;
+	min-height: 550px;
 }
+.carousel_container2{
+		min-height: 550px !important;
+	}
 .comillotas1{
 	width: 150px;
 	position: relative; bottom:250px; left: 8%;
@@ -253,6 +178,7 @@ font-size: 1.2em;
 	margin-bottom: 5%;
 	margin-top: 10%;
 	text-align: center;
+	min-width: 200px;
 }
 .container-city:hover{
 	border: 1px solid lightgray;
@@ -311,6 +237,10 @@ font-size: 1.2em;
  .input-field label {
      color: #000;
    }
+ .justify{
+
+ }
+ 
 .misionvisionBG{
 	background-image: url('../images/Backgrounds/Imagen-13.png');
 	background-position: center; /* Center the image */
@@ -335,8 +265,10 @@ font-size: 1.2em;
 .li-text{
 	color:black;	
 	font-size: 13px;
-	text-align: justify;
 	margin-bottom: 10px;
+	text-align: justify;
+	text-justify: inter-word;
+	hyphens: auto;
 }
 .lineAbajo{
 	border-bottom: 1px solid black;
@@ -382,10 +314,21 @@ font-size: 1.2em;
 	letter-spacing: 2px;
 	text-align: center;
 }
+.subtitle-verticalp1{
+	writing-mode: vertical-lr;
+	min-height: 370px;
+		 -ms-transform: rotate(180deg); /* IE 9 */
+	 -webkit-transform: rotate(180deg); /* Safari 3-8 */
+	transform: rotate(180deg);
+	color: #ADADAD;
+	letter-spacing: 2px;
+	text-align: center;
+}
 .mision{
 	font-size: 16px;
 	text-align: justify;
 	text-justify: inter-word;
+	hyphens: auto;
 }
 .shadow{
 	background-color: #F5F5F5;
@@ -422,6 +365,7 @@ font-size: 1.2em;
 }
 #componentes{
   	padding-left: 5%;
+  	max-height: 800px;
 }
 .componentesBG{
 	background: url('../images/Backgrounds/Imagen-11.png');
